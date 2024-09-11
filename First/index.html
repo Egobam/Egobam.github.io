@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Гиперссылки: </h2>
+    <ul>
+        <li> <a href="http://kubsu.ru">абсолютную гиперссылку на главную страницу сайта kubsu.ru</a></li>
+        <li> <a href="https://kubsu.ru">абсолютную на главную сайта kubsu.ru в протоколе https </a> </li>
+        <li> <a href="https://shop.wwf.ca/cdn/shop/files/giant-panda-WW230176.jpg?v=1694540662&width=2048">ссылку-изображение</a> 
+            <img src="https://shop.wwf.ca/cdn/shop/files/giant-panda-WW230176.jpg?v=1694540662&width=2048" alt = "panda" width="100px"> </li>
+        <li> <a href="/internal-page">сокращенную ссылку на внутреннюю страницу</a></li>
+        <li> <a href="/">сокращенную ссылку на главную страницу</a></li>
+        <li> <a href="#fragment-page">ссылку на фрагмент текущей страницы</a></li>
+        <li> <a href="https://ozon.com/page?param1=value1&param2=value2&param3=value3">ссылку с тремя параметрами в URL</a></li>
+        <li> <a href="https://airbnb.com/page?id=202529">ссылку с параметром id в URL</a></li>
+        <li><a href="index.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+        <li><a href="about/html">Относительная ссылка на страницу в каталоге about</a></li>
+        <li><a href="../site.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+        <li><a href="../../site.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+        <li><a href="https://example.com">Контекстная ссылка в абзаце</a></li>
+        <li><a href="http://kubsu.ru#fragment">Ссылка на фрагмент страницы стороннего сайта</a></li>
+        <map name="button">
+            <area shape="rect" coords="10,10,100,100" href="https://rectangle.com" alt="прямоугольник">
+            <area shape="circle" coords="100,5,100" href="https://circle.com" alt="круг">
+        </map>
+        <li><a href="">Ссылка с пустым href</a></li>
+        <li><a>Ссылка без href</a></li>
+        <li><a rel="nofollow" href="https://google.com">Ссылка по которой запрещен переход поисковикам</a></li>
+        <li><a rel="noindex" href="https://google.com">Запрещенная для индексации поисковиками</a></li>
+        <li>
+            <ol>
+                <li><a href="https://ozom.ru">Первая ссылка</a></li>
+                <li><a href="https://yandex.ru">Вторая ссылка</a></li>
+            </ol>
+        </li>
+        <li><a href="ftp://egor:qwerty12345@ftp.admin./file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
+    </ul>
+    <br>
+    <h2> Формы: </h2>
+    <ul>
+        <li>
+            <form>
+                <label for="name">Ваше ФИО: </label>
+                <input id="name" type="text">
+            </form>
+        </li>
+        <li>
+            <form>
+                <label for="phone">Ваш номер телефона: </label>
+                <input id="phone" type="tel">
+            </form>
+        </li>
+        <li>
+            <form>
+                <label for="email">Ваша электронная почтв: </label>
+                <input id="email" type="email">
+            </form>
+        </li>
+        <li>
+            <form>
+                <label for="birthday">Ваша дата рождения: </label>
+                <input id="birthday" type="date">
+            </form>
+        </li>
+        <li>
+            <form>
+                <label for="gender">Ваш пол: </label>
+                <input type="radio" name="gender" id="male" value="male"> 
+                <label for="male">Мужской</label>
+                <input type="radio" name="gender" id="female" value="female"> 
+                <label for="female">Женский</label>
+            </form>
+        </li>
+        <li>
+            <form>
+                <label for="languages">Ваш любимый язык программирования: </label>
+                <select name="languages" id="languages" multiple>
+                    <option value="Pascal">Pascal</option>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Haskel">Haskel</option>
+                    <option value="Clojure">Clojure</option>
+                    <option value="Prolog">Prolog</option>
+                    <option value="Scala">Scala</option>
+                </select>
+            </form>
+        </li>
+        <li>
+            <form>
+                <label for="bio">Биография: </label>
+                <textarea name="bio" id="bio" rows = 5 col = 20></textarea>
+            </form>
+        </li>
+        <li>
+            <form>
+                <label for="check">С конрактом ознакомлен: </label>
+                <input type="checkbox" name="check" id="check">
+            </form>
+        </li>
+        <li>
+            <form>
+                <input type="submit" value="Сохранить"> 
+            </form>
+        </li>
+    </ul>
+</body>
+</html> 
