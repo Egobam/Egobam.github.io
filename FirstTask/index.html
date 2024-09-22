@@ -21,20 +21,25 @@
         <li><a href="about/html">Относительная ссылка на страницу в каталоге about</a></li>
         <li><a href="../site.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
         <li><a href="../../site.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
-        <li><a href="https://example.com">Контекстная ссылка в абзаце</a></li>
+        <li> Контекстная <a href="https://example.com">ссылка </a> в абзаце</li>
         <li><a href="http://kubsu.ru#fragment">Ссылка на фрагмент страницы стороннего сайта</a></li>
-        <map name="button">
-            <area shape="rect" coords="10,10,100,100" href="https://rectangle.com" alt="прямоугольник">
-            <area shape="circle" coords="100,5,100" href="https://circle.com" alt="круг">
-        </map>
+        <li>
+            <img src="https://thumbs.dreamstime.com/z/geometric-shape-square-circle-triangle-rectangle-icon-vector-illustration-isolated-white-background-194796064.jpg" alt="Shapes" usemap="#shapesMap" width="300px" height="300px">
+            <map name="shapesMap">
+                <!-- Круглая область -->
+                <area shape="circle" coords="215,85,50" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Qfiij5GwqR66rg0-yvHmV769_RbfhAsSVQ&s" alt="Circle">
+                <!-- Прямоугольная область -->
+                <area shape="rect" coords="170,170,290,260" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRqyc5mJuhdqmBDhbuT07-RxPobTcJZe4-8g&s" alt="Rectangle">
+            </map>
+        </li>
         <li><a href="">Ссылка с пустым href</a></li>
         <li><a>Ссылка без href</a></li>
         <li><a rel="nofollow" href="https://google.com">Ссылка по которой запрещен переход поисковикам</a></li>
         <li><a rel="noindex" href="https://google.com">Запрещенная для индексации поисковиками</a></li>
         <li>
             <ol>
-                <li><a href="https://ozon.ru">Первая ссылка</a></li>
-                <li><a href="https://yandex.ru">Вторая ссылка</a></li>
+                <li><a href="https://ozon.ru" title="Магазин OZON">Первая ссылка</a></li>
+                <li><a href="https://yandex.ru" title="Браузер Yandex">Вторая ссылка</a></li>
             </ol>
         </li>
         <li><a href="ftp://egor:qwerty12345@ftp.admin./file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
@@ -68,7 +73,7 @@
             </li>
             <li>
                 <label for="languages">Ваш любимый язык программирования: </label>
-                <select name="languages" id="languages" multiple>
+                <select name="languages[]" id="languages" multiple>
                     <option value="Pascal">Pascal</option>
                     <option value="C">C</option>
                     <option value="C++">C++</option>
