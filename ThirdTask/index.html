@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="header">
+        <div class="logo">
+            <img src="LOGO.jpg" alt="Логотип">
+            <h1>Site number 2</h1>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#links">Ссылки</a></li>
+                <li><a href="#table">Таблица</a></li>
+                <li><a href="#form">Форма</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container" id="links">
+          <h2> Гиперссылки: </h2>
+          <ul>
+              <li> <a href="http://kubsu.ru">абсолютную гиперссылку на главную страницу сайта kubsu.ru</a></li>
+              <li> <a href="https://kubsu.ru">абсолютную на главную сайта kubsu.ru в протоколе https </a> </li>
+              <li> <a href="https://shop.wwf.ca/cdn/shop/files/giant-panda-WW230176.jpg?v=1694540662&width=2048">ссылку-изображение</a> 
+                  <img src="https://shop.wwf.ca/cdn/shop/files/giant-panda-WW230176.jpg?v=1694540662&width=2048" alt = "panda" width="100px"> </li>
+              <li> <a href="/internal-page">сокращенную ссылку на внутреннюю страницу</a></li>
+              <li> <a href="/">сокращенную ссылку на главную страницу</a></li>
+              <li> <a href="#fragment-page">ссылку на фрагмент текущей страницы</a></li>
+              <li> <a href="https://ozon.com/page?param1=value1&param2=value2&param3=value3">ссылку с тремя параметрами в URL</a></li>
+              <li> <a href="https://airbnb.com/page?id=202529">ссылку с параметром id в URL</a></li>
+              <li><a href="index.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+              <li><a href="about/html">Относительная ссылка на страницу в каталоге about</a></li>
+              <li><a href="../site.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+              <li><a href="../../site.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+              <li> Контекстная <a href="https://example.com">ссылка </a> в абзаце</li>
+              <li><a href="http://kubsu.ru#fragment">Ссылка на фрагмент страницы стороннего сайта</a></li>
+              <li>
+                  <img src="https://thumbs.dreamstime.com/z/geometric-shape-square-circle-triangle-rectangle-icon-vector-illustration-isolated-white-background-194796064.jpg" alt="Shapes" usemap="#shapesMap" width="300px" height="300px">
+                  <map name="shapesMap">
+                      <!-- Круглая область -->
+                      <area shape="circle" coords="215,85,50" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Qfiij5GwqR66rg0-yvHmV769_RbfhAsSVQ&s" alt="Circle">
+                      <!-- Прямоугольная область -->
+                      <area shape="rect" coords="170,170,290,260" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRqyc5mJuhdqmBDhbuT07-RxPobTcJZe4-8g&s" alt="Rectangle">
+                  </map>
+              </li>
+              <li><a href="">Ссылка с пустым href</a></li>
+              <li><a>Ссылка без href</a></li>
+              <li><a rel="nofollow" href="https://google.com">Ссылка по которой запрещен переход поисковикам</a></li>
+              <li><a rel="noindex" href="https://google.com">Запрещенная для индексации поисковиками</a></li>
+              <li>
+                  <ol>
+                      <li><a href="https://ozon.ru" title="Магазин OZON">Первая ссылка</a></li>
+                      <li><a href="https://yandex.ru" title="Браузер Yandex">Вторая ссылка</a></li>
+                  </ol>
+              </li>
+              <li><a href="ftp://egor:qwerty12345@ftp.admin./file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
+          </ul>
+        </div>
+        
+        <div class="container">
+            <h2> Таблица сравнения телефонов: </h2>
+            <table id="table">
+                <tr>
+                    <th>Название</th>
+                    <th>Цена</th>
+                    <th>Общая оценка</th>
+                    <th>Плюсы и минусы</th>
+                </tr>
+                <tr>
+                    <td>iPhone 13 Pro</td>
+                    <td>120 000 ₽</td>
+                    <td>9/10</td>
+                    <td><span class="positive">+ Отличная камера</span><br><span class="negative">- Высокая цена</span></td>
+                </tr>
+                <tr>
+                    <td>Samsung Galaxy S21</td>
+                    <td>85 000 ₽</td>
+                    <td>8.5/10</td>
+                    <td><span class="positive">+ Высокая производительность</span><br><span class="negative">- Пластиковый корпус</span></td>
+                </tr>
+                <tr>
+                    <td>Xiaomi Mi 11</td>
+                    <td>65 000 ₽</td>
+                    <td>8/10</td>
+                    <td><span class="positive">+ Доступная цена</span><br><span class="negative">- Плохая поддержка обновлений</span></td>
+                </tr>
+                <tr>
+                    <td>Google Pixel 6</td>
+                    <td>70 000 ₽</td>
+                    <td>9.5/10</td>
+                    <td><span class="positive">+ Чистый Android</span><br><span class="negative">- Доступность только в некоторых странах</span></td>
+                </tr>
+                <tr>
+                    <td>OnePlus 9</td>
+                    <td>75 000 ₽</td>
+                    <td>9/10</td>
+                    <td><span class="positive">+ Быстрая зарядка</span><br><span class="negative">- Посредственная камера</span></td>
+                </tr>
+                <tr>
+                    <td>Huawei P50 Pro</td>
+                    <td>90 000 ₽</td>
+                    <td>8.8/10</td>
+                    <td><span class="positive">+ Отличная камера</span><br><span class="negative">- Нет Google сервисов</span></td>
+                </tr>
+                <tr>
+                    <td>Realme GT 2 Pro</td>
+                    <td>55 000 ₽</td>
+                    <td>8.3/10</td>
+                    <td><span class="positive">+ Мощный процессор</span><br><span class="negative">- Плохая оптимизация ПО</span></td>
+                </tr>
+        </table>
+        </div>
+        <div class = "container" id="form">
+                    <h2> Формы: </h2>
+            <ul>
+                <form>
+                    <li>
+                        <label for="name">Ваше ФИО: </label>
+                        <input id="name" type="text">
+                    </li>
+                    <li>
+                        <label for="phone">Ваш номер телефона: </label>
+                        <input id="phone" type="tel">
+                    </li>
+                    <li>
+                        <label for="email">Ваша электронная почтв: </label>
+                        <input id="email" type="email">
+                    </li>
+                    <li>
+                        <label for="birthday">Ваша дата рождения: </label>
+                        <input id="birthday" type="date">
+                    </li>
+                    <li>
+                        <label for="gender">Ваш пол: </label>
+                        <input type="radio" name="gender" id="male" value="male"> 
+                        <label for="male">Мужской</label>
+                        <input type="radio" name="gender" id="female" value="female"> 
+                        <label for="female">Женский</label>
+                    </li>
+                    <li>
+                        <label for="languages">Ваш любимый язык программирования: </label>
+                        <select name="languages[]" id="languages" multiple>
+                            <option value="Pascal">Pascal</option>
+                            <option value="C">C</option>
+                            <option value="C++">C++</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="Haskel">Haskel</option>
+                            <option value="Clojure">Clojure</option>
+                            <option value="Prolog">Prolog</option>
+                            <option value="Scala">Scala</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="bio">Биография: </label>
+                        <textarea name="bio" id="bio" rows = 5 col = 20></textarea>
+                    </li>
+                    <li>
+                        <label for="check">С конрактом ознакомлен: </label>
+                        <input type="checkbox" name="check" id="check">
+                    </li>
+                    <li>
+                        <input type="submit" value="Сохранить"> 
+                    </li>
+                </form>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">Made with ❤️ by Egobam</div>    
+    </footer>
+    
+
+</body>
+</html>

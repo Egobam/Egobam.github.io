@@ -1,0 +1,203 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6f2ff;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Шапка */
+#header {
+    display: flex; /* Используем Flexbox */
+    flex-direction: column; /* Вертикальное расположение для мобильных устройств */
+    background-color: #4a7c59; /* Спокойный зеленый цвет для шапки */
+    color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Логотип */
+#header .logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Логотип изображение */
+#header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; /* Уменьшено для мобильной версии */
+}
+
+/* Заголовок */
+#header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* Навигация */
+#nav {
+    display: flex; /* Используем Flexbox */
+    justify-content: center; /* Центрируем навигацию */
+    margin-top: 10px;
+}
+
+#nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Используем Flexbox для управления элементами списка */
+    flex-direction: column; /* Вертикальное расположение для мобильных устройств */
+}
+
+#nav ul li {
+    margin: 5px 0; /* Вертикальный отступ между пунктами */
+}
+
+#nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px; /* Добавлено для удобства нажатия */
+    display: block; /* Убедитесь, что вся область ссылки кликабельна */
+}
+
+#nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Очистка обтекания (для float) */
+#header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Таблица */
+#table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+#table th, #table td {
+    border: 1px solid #4a7c59;
+    padding: 10px;
+    text-align: left;
+}
+
+#table th {
+    background-color: #4a7c59;
+    color: white;
+}
+
+#table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#table tr:nth-child(odd) {
+    background-color: #e6f2ff;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+
+/* Форма */
+form ul {
+    list-style: none;
+    padding: 0;
+}
+
+form li {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: inline-block;
+    width: 200px;
+}
+
+form input[type="text"], form input[type="tel"], form input[type="email"], form input[type="date"], form textarea, form select {
+    width: 300px;
+    padding: 5px;
+}
+
+form input[type="radio"] {
+    margin-left: 20px;
+}
+
+form input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+form input[type="submit"] {
+    background-color: #4a7c59;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #609978;
+}
+
+/* Футтер */
+footer {
+    background-color: #4a7c59;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Медиа-запросы */
+@media (min-width: 768px) {
+    /* На планшетах и десктопах изменяем направление навигации на горизонтальное */
+    #header {
+        flex-direction: row; /* Горизонтальное расположение для планшетов и десктопов */
+        justify-content: space-between; /* Разделяем логотип и навигацию */
+    }
+
+    #nav ul {
+        flex-direction: row; /* Горизонтальное расположение навигации */
+        padding: 0; /* Убираем отступы для горизонтальной навигации */
+    }
+
+    #nav ul li {
+        margin: 0 10px; /* Горизонтальный отступ между пунктами */
+    }
+}
+
+/* Правила для мобильных устройств (первые загружаются) */
+@media (max-width: 767px) {
+    /* Порядок отображения элементов */
+    .container {
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение для мобильных устройств */
+    }
+
+    #table {
+        order: -1; /* Таблица будет выше списка ссылок */
+    }
+
+    #nav {
+        order: 1; /* Список ссылок будет ниже таблицы */
+    }
+}
