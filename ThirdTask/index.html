@@ -3,150 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task2</title>
+    <title>Task 3</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header id="header">
-        <div class="logo">
-            <img src="LOGO.jpg" alt="Логотип">
-            <h1>Site number 2</h1>
+    <header class="header">
+        <div class="header__logo">
+            <img src="LOGO.jpg" alt="Логотип" class="header__logo-image">
+            <h1 class="header__title">Site number 2</h1>
         </div>
-        <nav id="nav">
-            <ul>
-                <li><a href="#links">Ссылки</a></li>
-                <li><a href="#table">Таблица</a></li>
-                <li><a href="#form">Форма</a></li>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#links">Ссылки</a></li>
+                <li class="nav__item"><a class="nav__link" href="#table">Таблица</a></li>
+                <li class="nav__item"><a class="nav__link" href="#form">Форма</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main">
-        <div class="container" id="links">
-          <h2> Гиперссылки: </h2>
-          <ul>
-              <li> <a href="http://kubsu.ru">абсолютную гиперссылку на главную страницу сайта kubsu.ru</a></li>
-              <li> <a href="https://kubsu.ru">абсолютную на главную сайта kubsu.ru в протоколе https </a> </li>
-              <li> <a href="https://shop.wwf.ca/cdn/shop/files/giant-panda-WW230176.jpg?v=1694540662&width=2048">ссылку-изображение</a> 
-                  <img src="https://shop.wwf.ca/cdn/shop/files/giant-panda-WW230176.jpg?v=1694540662&width=2048" alt = "panda" width="100px"> </li>
-              <li> <a href="/internal-page">сокращенную ссылку на внутреннюю страницу</a></li>
-              <li> <a href="/">сокращенную ссылку на главную страницу</a></li>
-              <li> <a href="#fragment-page">ссылку на фрагмент текущей страницы</a></li>
-              <li> <a href="https://ozon.com/page?param1=value1&param2=value2&param3=value3">ссылку с тремя параметрами в URL</a></li>
-              <li> <a href="https://airbnb.com/page?id=202529">ссылку с параметром id в URL</a></li>
-              <li><a href="index.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-              <li><a href="about/html">Относительная ссылка на страницу в каталоге about</a></li>
-              <li><a href="../site.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
-              <li><a href="../../site.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
-              <li> Контекстная <a href="https://example.com">ссылка </a> в абзаце</li>
-              <li><a href="http://kubsu.ru#fragment">Ссылка на фрагмент страницы стороннего сайта</a></li>
-              <li>
-                  <img src="https://thumbs.dreamstime.com/z/geometric-shape-square-circle-triangle-rectangle-icon-vector-illustration-isolated-white-background-194796064.jpg" alt="Shapes" usemap="#shapesMap" width="300px" height="300px">
-                  <map name="shapesMap">
-                      <!-- Круглая область -->
-                      <area shape="circle" coords="215,85,50" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Qfiij5GwqR66rg0-yvHmV769_RbfhAsSVQ&s" alt="Circle">
-                      <!-- Прямоугольная область -->
-                      <area shape="rect" coords="170,170,290,260" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRqyc5mJuhdqmBDhbuT07-RxPobTcJZe4-8g&s" alt="Rectangle">
-                  </map>
-              </li>
-              <li><a href="">Ссылка с пустым href</a></li>
-              <li><a>Ссылка без href</a></li>
-              <li><a rel="nofollow" href="https://google.com">Ссылка по которой запрещен переход поисковикам</a></li>
-              <li><a rel="noindex" href="https://google.com">Запрещенная для индексации поисковиками</a></li>
-              <li>
-                  <ol>
-                      <li><a href="https://ozon.ru" title="Магазин OZON">Первая ссылка</a></li>
-                      <li><a href="https://yandex.ru" title="Браузер Yandex">Вторая ссылка</a></li>
-                  </ol>
-              </li>
-              <li><a href="ftp://egor:qwerty12345@ftp.admin./file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
-          </ul>
-        </div>
-        
-        <div class="container">
-            <h2> Таблица сравнения телефонов: </h2>
-            <table id="table">
-                <tr>
-                    <th>Название</th>
-                    <th>Цена</th>
-                    <th>Общая оценка</th>
-                    <th>Плюсы и минусы</th>
-                </tr>
-                <tr>
-                    <td>iPhone 13 Pro</td>
-                    <td>120 000 ₽</td>
-                    <td>9/10</td>
-                    <td><span class="positive">+ Отличная камера</span><br><span class="negative">- Высокая цена</span></td>
-                </tr>
-                <tr>
-                    <td>Samsung Galaxy S21</td>
-                    <td>85 000 ₽</td>
-                    <td>8.5/10</td>
-                    <td><span class="positive">+ Высокая производительность</span><br><span class="negative">- Пластиковый корпус</span></td>
-                </tr>
-                <tr>
-                    <td>Xiaomi Mi 11</td>
-                    <td>65 000 ₽</td>
-                    <td>8/10</td>
-                    <td><span class="positive">+ Доступная цена</span><br><span class="negative">- Плохая поддержка обновлений</span></td>
-                </tr>
-                <tr>
-                    <td>Google Pixel 6</td>
-                    <td>70 000 ₽</td>
-                    <td>9.5/10</td>
-                    <td><span class="positive">+ Чистый Android</span><br><span class="negative">- Доступность только в некоторых странах</span></td>
-                </tr>
-                <tr>
-                    <td>OnePlus 9</td>
-                    <td>75 000 ₽</td>
-                    <td>9/10</td>
-                    <td><span class="positive">+ Быстрая зарядка</span><br><span class="negative">- Посредственная камера</span></td>
-                </tr>
-                <tr>
-                    <td>Huawei P50 Pro</td>
-                    <td>90 000 ₽</td>
-                    <td>8.8/10</td>
-                    <td><span class="positive">+ Отличная камера</span><br><span class="negative">- Нет Google сервисов</span></td>
-                </tr>
-                <tr>
-                    <td>Realme GT 2 Pro</td>
-                    <td>55 000 ₽</td>
-                    <td>8.3/10</td>
-                    <td><span class="positive">+ Мощный процессор</span><br><span class="negative">- Плохая оптимизация ПО</span></td>
-                </tr>
-        </table>
-        </div>
-        <div class = "container" id="form">
-                    <h2> Формы: </h2>
-            <ul>
-                <form>
-                    <li>
-                        <label for="name">Ваше ФИО: </label>
-                        <input id="name" type="text">
+        <section class="section section--links" id="links">
+            <h2 class="section__title">Гиперссылки:</h2>
+            <ul class="link-list">
+                <li class="link-list__item"><a class="link-list__link" href="http://kubsu.ru">абсолютную гиперссылку на главную страницу сайта kubsu.ru</a></li>
+                <li class="link-list__item"><a class="link-list__link" href="https://kubsu.ru">абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
+                <li class="link-list__item">
+                    <a class="link-list__link" href="https://shop.wwf.ca/cdn/shop/files/giant-panda-WW230176.jpg?v=1694540662&width=2048">ссылку-изображение</a>
+                    <img class="link-list__image" src="https://shop.wwf.ca/cdn/shop/files/giant-panda-WW230176.jpg?v=1694540662&width=2048" alt="panda" width="100">
+                </li>
+                <li class="link-list__item"><a class="link-list__link" href="/internal-page">сокращенную ссылку на внутреннюю страницу</a></li>
+                <li class="link-list__item"><a class="link-list__link" href="/">сокращенную ссылку на главную страницу</a></li>
+                <li class="link-list__item"><a class="link-list__link" href="#fragment-page">ссылку на фрагмент текущей страницы</a></li>
+                <li class="link-list__item"><a class="link-list__link" href="https://ozon.com/page?param1=value1&param2=value2&param3=value3">ссылку с тремя параметрами в URL</a></li>
+                <li class="link-list__item"><a class="link-list__link" href="https://airbnb.com/page?id=202529">ссылку с параметром id в URL</a></li>
+                <li class="link-list__item"><a class="link-list__link" href="index.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+                <li class="link-list__item"><a class="link-list__link" href="about/html">Относительная ссылка на страницу в каталоге about</a></li> 
+                <li class="link-list__item"><a class="link-list__link" href="../site.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+                <li class="link-list__item"><a class="link-list__link" href="../../site.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+                <li class="link-list__item">Контекстная <a class="link-list__link" href="https://example.com">ссылка</a> в абзаце</li>
+                <li class="link-list__item"><a class="link-list__link" href="http://kubsu.ru#fragment">Ссылка на фрагмент страницы стороннего сайта</a></li>
+                <li class="link-list__item">
+                    <img class="link-list__image" src="https://thumbs.dreamstime.com/z/geometric-shape-square-circle-triangle-rectangle-icon-vector-illustration-isolated-white-background-194796064.jpg" alt="Shapes" usemap="#shapesMap" width="200">
+                    <map name="shapesMap">
+                        <area shape="circle" coords="100,60,40" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Qfiij5GwqR66rg0-yvHmV769_RbfhAsSVQ&s" alt="Circle">
+                        <area shape="rect" coords="40,150,160,200" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRqyc5mJuhdqmBDhbuT07-RxPobTcJZe4-8g&s" alt="Rectangle">
+                    </map>
+                </li>
+                <li class="link-list__item"><a class="link-list__link" href="#">Ссылка с пустым href</a></li>
+                <li class="link-list__item"><a class="link-list__link" href="#">Ссылка без href</a></li>
+                <li class="link-list__item"><a class="link-list__link" rel="nofollow" href="https://google.com">Ссылка по которой запрещен переход поисковикам</a></li>
+                <li class="link-list__item"><a class="link-list__link" rel="noindex" href="https://google.com">Запрещенная для индексации поисковиками</a></li>
+                <li class="link-list__item">
+                    <ol class="link-list__ordered">
+                        <li class="link-list__ordered-item"><a class="link-list__link" href="https://ozon.ru" title="Магазин OZON">Первая ссылка</a></li>
+                        <li class="link-list__ordered-item"><a class="link-list__link" href="https://yandex.ru" title="Браузер Yandex">Вторая ссылка</a></li>
+                    </ol>
+                </li>
+                <li class="link-list__item"><a class="link-list__link" href="ftp://egor:qwerty12345@ftp.admin./file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
+            </ul>
+        </section>
+
+        <section class="section section--table" id="table">
+            <h2 class="section__title">Таблица сравнения телефонов:</h2>
+            <table class="comparison-table">
+                <thead class="comparison-table__header">
+                    <tr>
+                        <th class="comparison-table__header-cell">Название</th>
+                        <th class="comparison-table__header-cell">Цена</th>
+                        <th class="comparison-table__header-cell">Общая оценка</th>
+                        <th class="comparison-table__header-cell">Плюсы и минусы</th>
+                    </tr>
+                </thead>
+                <tbody class="comparison-table__body">
+                    <tr class="comparison-table__row">
+                        <td class="comparison-table__cell">iPhone 13 Pro</td>
+                        <td class="comparison-table__cell">120 000 ₽</td>
+                        <td class="comparison-table__cell">9/10</td>
+                        <td class="comparison-table__cell">
+                            <span class="comparison-table__positive">+ Отличная камера</span><br>
+                            <span class="comparison-table__negative">- Высокая цена</span>
+                        </td>
+                    </tr>
+                    <tr class="comparison-table__row">
+                        <td class="comparison-table__cell">Samsung Galaxy S21</td>
+                        <td class="comparison-table__cell">85 000 ₽</td>
+                        <td class="comparison-table__cell">8.5/10</td>
+                        <td class="comparison-table__cell">
+                            <span class="comparison-table__positive">+ Высокая производительность</span><br>
+                            <span class="comparison-table__negative">- Пластиковый корпус</span>
+                        </td>
+                    </tr>
+                    <tr class="comparison-table__row">
+                        <td class="comparison-table__cell">Xiaomi Mi 11</td>
+                        <td class="comparison-table__cell">65 000 ₽</td>
+                        <td class="comparison-table__cell">8/10</td>
+                        <td class="comparison-table__cell">
+                            <span class="comparison-table__positive">+ Доступная цена</span><br>
+                            <span class="comparison-table__negative">- Плохая поддержка обновлений</span>
+                        </td>
+                    </tr>
+                    <tr class="comparison-table__row">
+                        <td class="comparison-table__cell">Google Pixel 6</td>
+                        <td class="comparison-table__cell">70 000 ₽</td>
+                        <td class="comparison-table__cell">9.5/10</td>
+                        <td class="comparison-table__cell">
+                            <span class="comparison-table__positive">+ Чистый Android</span><br>
+                            <span class="comparison-table__negative">- Доступность только в некоторых странах</span>
+                        </td>
+                    </tr>
+                    <tr class="comparison-table__row">
+                        <td class="comparison-table__cell">OnePlus 9</td>
+                        <td class="comparison-table__cell">75 000 ₽</td>
+                        <td class="comparison-table__cell">9/10</td>
+                        <td class="comparison-table__cell">
+                            <span class="comparison-table__positive">+ Быстрая зарядка</span><br>
+                            <span class="comparison-table__negative">- Посредственная камера</span>
+                        </td>
+                    </tr>
+                    <tr class="comparison-table__row">
+                        <td class="comparison-table__cell">Huawei P50 Pro</td>
+                        <td class="comparison-table__cell">90 000 ₽</td>
+                        <td class="comparison-table__cell">8.8/10</td>
+                        <td class="comparison-table__cell">
+                            <span class="comparison-table__positive">+ Отличная камера</span><br>
+                            <span class="comparison-table__negative">- Нет Google сервисов</span>
+                        </td>
+                    </tr>
+                    <tr class="comparison-table__row">
+                        <td class="comparison-table__cell">Realme GT 2 Pro</td>
+                        <td class="comparison-table__cell">55 000 ₽</td>
+                        <td class="comparison-table__cell">8.3/10</td>
+                        <td class="comparison-table__cell">
+                            <span class="comparison-table__positive">+ Мощный процессор</span><br>
+                            <span class="comparison-table__negative">- Плохая оптимизация ПО</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section section--form" id="form">
+            <h2 class="section__title">Форма:</h2>
+            <form class="form">
+                <ul class="form__list">
+                    <li class="form__item">
+                        <label class="form__label" for="name">Ваше ФИО:</label>
+                        <input class="form__input" id="name" type="text" required>
                     </li>
-                    <li>
-                        <label for="phone">Ваш номер телефона: </label>
-                        <input id="phone" type="tel">
+                    <li class="form__item">
+                        <label class="form__label" for="phone">Ваш номер телефона:</label>
+                        <input class="form__input" id="phone" type="tel" required>
                     </li>
-                    <li>
-                        <label for="email">Ваша электронная почтв: </label>
-                        <input id="email" type="email">
+                    <li class="form__item">
+                        <label class="form__label" for="email">Ваша электронная почта:</label>
+                        <input class="form__input" id="email" type="email" required>
                     </li>
-                    <li>
-                        <label for="birthday">Ваша дата рождения: </label>
-                        <input id="birthday" type="date">
+                    <li class="form__item">
+                        <label class="form__label" for="birthday">Ваша дата рождения:</label>
+                        <input class="form__input" id="birthday" type="date" required>
                     </li>
-                    <li>
-                        <label for="gender">Ваш пол: </label>
-                        <input type="radio" name="gender" id="male" value="male"> 
-                        <label for="male">Мужской</label>
-                        <input type="radio" name="gender" id="female" value="female"> 
-                        <label for="female">Женский</label>
+                    <li class="form__item">
+                        <label class="form__label">Ваш пол:</label>
+                        <input class="form__radio" type="radio" name="gender" id="male" value="male">
+                        <label class="form__radio-label" for="male">Мужской</label>
+                        <input class="form__radio" type="radio" name="gender" id="female" value="female">
+                        <label class="form__radio-label" for="female">Женский</label>
                     </li>
-                    <li>
-                        <label for="languages">Ваш любимый язык программирования: </label>
-                        <select name="languages[]" id="languages" multiple>
+                    <li class="form__item">
+                        <label class="form__label" for="languages">Ваш любимый язык программирования:</label>
+                        <select class="form__select" name="languages[]" id="languages" multiple>
                             <option value="Pascal">Pascal</option>
                             <option value="C">C</option>
                             <option value="C++">C++</option>
@@ -160,26 +186,25 @@
                             <option value="Scala">Scala</option>
                         </select>
                     </li>
-                    <li>
-                        <label for="bio">Биография: </label>
-                        <textarea name="bio" id="bio" rows = 5 col = 20></textarea>
+                    <li class="form__item">
+                        <label class="form__label" for="bio">Биография:</label>
+                        <textarea class="form__textarea" name="bio" id="bio" rows="5" cols="20"></textarea>
                     </li>
-                    <li>
-                        <label for="check">С конрактом ознакомлен: </label>
-                        <input type="checkbox" name="check" id="check">
+                    <li class="form__item">
+                        <label class="form__checkbox-label" for="check">С контрактом ознакомлен:</label>
+                        <input class="form__checkbox" type="checkbox" name="check" id="check">
                     </li>
-                    <li>
-                        <input type="submit" value="Сохранить"> 
+                    <li class="form__item">
+                        <input class="form__submit" type="submit" value="Сохранить">
                     </li>
-                </form>
-            </ul>
-        </div>
+                </ul>
+            </form>
+        </section>
     </main>
 
-    <footer>
-        <div class="footer-content">Made with ❤️ by Egobam</div>    
+    <footer class="footer">
+        <div class="footer__content">Made with ❤️ by Egobam</div>
     </footer>
-    
 
 </body>
 </html>
