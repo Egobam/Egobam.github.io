@@ -1,0 +1,82 @@
+body {
+    background-color: #e9ecef; /* Светло-серый фон */
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #4a90e2; /* Синий цвет для заголовка */
+    color: #f5f7fa; /* Белый текст */
+}
+
+h1 {
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: black; /* Темно-серый для заголовков секций */
+}
+
+.nav {
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #f5f7fa; /* Белый цвет ссылок */
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: black; /* Светлый цвет при наведении */
+}
+
+.container {
+    margin-top: 20px; /* Отступ сверху */
+    background-color: #fff; /* Белый фон для контейнера */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для эффекта подъема */
+    padding: 20px; /* Внутренний отступ */
+    transition: transform 0.3s; /* Плавное изменение */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Подъем контейнера при наведении */
+}
+
+.table th {
+    background-color: #4a90e2; /* Синий фон для заголовков таблицы */
+    color: black; /* Белый текст */
+}
+
+.table td {
+    transition: background-color 0.3s; /* Плавное изменение фона ячеек */
+}
+
+.table td:hover {
+    background-color: #f1f1f1; /* Светло-серый фон при наведении на ячейку */
+}
+
+.btn-primary {
+    background-color: #4a90e2; /* Синий цвет кнопки */
+    border: none; /* Без рамки */
+    transition: background-color 0.3s, transform 0.2s; /* Плавное изменение */
+}
+
+.btn-primary:hover {
+    background-color: #357ab8; /* Темнее при наведении */
+    transform: translateY(-2px); /* Подъем кнопки */
+}
+
+footer {
+    background-color: #4a90e2; /* Синий цвет для подвала */
+    color: #f5f7fa; /* Белый текст */
+    font-weight: bold;
+    position: relative; /* Позиционирование для эффекта */
+    bottom: 0; /* Зафиксированный подвал */
+    width: 100%; /* Полная ширина */
+    text-align: center; /* Центрирование текста */
+    padding: 1rem 0; /* Внутренний отступ */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Тень для эффекта подъема */
+}
