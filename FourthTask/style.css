@@ -80,3 +80,22 @@ footer {
     padding: 1rem 0; /* Внутренний отступ */
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Тень для эффекта подъема */
 }
+
+.text-center {
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+    .links {
+        order: 1; /* Секция ссылок идет ниже */
+    }
+
+    .table {
+        order: 0; /* Помещаем секцию таблицы выше секции ссылок */
+    }
+
+    .form {
+        order: 2;
+    }
+}
+
