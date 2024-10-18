@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 5</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1 class="text">
-        Hello World!
-    </h1>
+    <div id = "bg"></div>
+    <div class="container">
+        <h1>Калькулятор стоимости заказа</h1>
+        
+        <label for="quantity">Количество товара:</label>
+        <input type="number" id="quantity" placeholder="Введите количество" min="1">
+    
+        <label for="product">Выберите товар:</label>
+        <select id="product">
+            <option value="0">Выберите товар</option>
+            <option value="1600">Концерт Toxi$ - 1600 руб.</option>
+            <option value="1300">Концерт Bushido Zho- 1300 руб.</option>
+            <option value="1900">Концерт OG Buda- 1900 руб.</option>
+            <option value="1100">Концерт Big Baby Tape - 1100 руб.</option>
+            <option value="5000">Концерт Morgenshtern - 5000 руб.</option>
+        </select>
+    
+        <button id="calculate">Посчитать стоимость</button>
+    
+        <div class="result" id="result"></div>
+    </div>
+    <script type="text/javascript" src="js/particles.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

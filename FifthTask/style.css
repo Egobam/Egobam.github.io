@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'lato';
+    background-color: black;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+h1 {
+    user-select: none;
+    color: #53ecec;
+    font-size:48px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 8rem;
+    z-index: 9999;
+    line-height:1em;
+    font-weight:bold;
+    animation: animate1 1s ease-in-out infinite alternate;
+    text-shadow: 1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.3);
+    
+}
+
+@keyframes animate1 {
+    from {
+        text-shadow: 0 0 20px #289aab;
+    }
+    to {
+        text-shadow: 0 0 30px #289aab,
+                    0 0 10px #289aab;
+    }
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+@keyframes animate2 {
+    from {
+        text-shadow: 0 0 6px #eb7a9e;
+    }
+    to {
+        text-shadow: 0 0 8px #eb7a9e,
+                    0 0 3px #eb7a9e;
+    }
+}
+
+label {
+    display: block;
+    user-select: none;
+    margin-top: 20px;
+    display: block;
+    color: #e8638e;
+    font-family: 'lato';
+    font-size: 24px;
+    animation: animate2 2s ease-in-out infinite alternate;
+    
+}
+
+input, select, button {
+    width: 100%;
+    user-select: none;  
+    padding: 10px;
+    margin-top: 5px;
+    color: #e8638e;
+    font-family: 'lato';
+    background-color: #fff5ee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input, select {
+    font-size: 18px;
+}
+
+input::placeholder {
+    color: #e8638e; /* Замените на нужный вам цвет */
+    opacity: 1; /* Установите прозрачность (по умолчанию 0.5) */
+}
+
+button {
+    margin-top: 20px;
+    animation: animate2 2s ease-in-out infinite alternate;
+    font-size: 28px;
+    border-radius: 35px;
+    font-weight:bold;
+}
+
+button:hover {
+    opacity: 0.95; /* Уменьшаем непрозрачность при наведении */
+}
+
+button:active {
+    border: 2px solid #6bdcee; /* Изменение границы при нажатии */
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 28px;
+    color: #53ecec;
+    text-align: center;
+    animation: animate1 2s ease-in-out infinite alternate;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Уменьшаем отступы на мобильных */
+    }
+    input, select, button {
+        padding: 8px; /* Уменьшаем внутренние отступы на мобильных */
+    }
+}
