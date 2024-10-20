@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tahoma', sans-serif;  
+    color: white;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 18s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    user-select: none;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.quantity, 
+.selectionType,
+.selectionOptions,
+.selectionProperty,
+.totalPrice {
+    user-select: none;
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    margin-left: 10px;
+}
+
+select {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin: 0 5px 0 10px;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.totalPrice {
+    padding: 1em 2em;
+    border: none;
+    background-color: #161a20; /* Цвет фона кнопки */
+    border-radius: 1000px; /* Закругление краёв */
+    position: relative; /* Для позиционирования псевдоэлемента */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Цвет текста */
+    font-size: 1.5rem; /* Размер шрифта */
+    z-index: 1; /* Убедитесь, что текст выше градиентного фона */
+}
+
+.totalPrice::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 1000px; /* Закругление краёв */
+    background-image: linear-gradient(to bottom right, #008cff, #e100ff); /* Градиент */
+    z-index: -1; /* Псевдоэлемент под текстом */
+    filter: blur(5px); /* Добавляем размытие для более мягкого эффекта */
+}
+
+.totalPrice:hover::before {
+    filter: blur(10px); /* Увеличиваем размытие при наведении */
+    transition: filter 0.3s; /* Плавный переход */
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem; /* Уменьшаем размер шрифта заголовка на мобильных устройствах */
+    }
+
+    .quantity, 
+    .selectionType,
+    .selectionOptions,
+    .selectionProperty,
+    .totalPrice {
+        font-size: 1.2rem; /* Уменьшаем размер шрифта для всех элементов */
+    }
+
+    input[type="number"] {
+        width: 80%; /* Увеличиваем ширину поля ввода на мобильных устройствах */
+    }
+
+    .totalPrice {
+        padding: 0.8em 1.5em; /* Уменьшаем внутренние отступы на мобильных устройствах */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem; /* Еще больше уменьшаем размер шрифта заголовка для маленьких экранов */
+    }
+
+    .quantity, 
+    .selectionType,
+    .selectionOptions,
+    .selectionProperty,
+    .totalPrice {
+        font-size: 1rem; /* Уменьшаем размер шрифта для всех элементов */
+    }
+
+    input[type="number"] {
+        width: 100%; /* Полное заполнение ширины для маленьких экранов */
+    }
+
+    .totalPrice {
+        padding: 0.5em 1em; /* Уменьшаем внутренние отступы на очень маленьких экранах */
+    }
+}

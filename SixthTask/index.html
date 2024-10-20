@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор</h1>
+        <div class="quantity">
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" min="1">
+        </div>
+
+        <div class="selectionType">
+            <span>Тип услуги:</span>
+            <label><input type="radio" name="serviceType" value="1">Концерт Пелагеи</label>
+            <label><input type="radio" name="serviceType" value="2">Концерт Bushido Zho</label>
+            <label><input type="radio" name="serviceType" value="3">Концерт Big Baby Tape</label>
+            <label><input type="radio" name="serviceType" value="4">Концерт Григория Лепса</label>
+        </div>
+
+        <div class="selectionOptions" id="optionsContainerOne" style="display: none;">
+            <label for="optionsOne">Опции:</label>
+            <select id="optionsOne">
+                <option value="">Выберите опцию</option>
+                <option value="option1">Танцпол</option>
+                <option value="option2">VIP</option>
+                <option value="option3">VIP + фото с исполнителем</option>
+            </select>
+        </div>
+
+        <div class="selectionOptions" id="optionsContainerTwo" style="display: none;">
+            <label for="optionsTwo">Опции:</label>
+            <select id="optionsTwo">
+                <option value="">Выберите опцию</option>
+                <option value="option1">AfterParty</option>
+                <option value="option2">Исполнение песни на заказ</option>
+            </select>
+        </div>
+
+        <div class="selectionProperty" id="checkboxContainer" style="display: none;">
+            <label><input type="checkbox" id="property1">Фото</label>
+            <label><input type="checkbox" id="property2">Роспись</label>
+            <label><input type="checkbox" id="property3">Передать привет</label>
+            <label><input type="checkbox" id="property4">Фирменный браслет</label>
+        </div>
+
+        <div class="totalPrice">
+            <p>Итоговая стоимость: <span id="totalCost">0</span> руб.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
