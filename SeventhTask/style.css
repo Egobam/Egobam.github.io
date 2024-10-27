@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#eceffe,#cef6fb);
+
+}
+
+.container {
+    max-width: 90vw;
+}
+
+.card-list .card-item {
+    width: 400px;
+    user-select: none;
+    display: block;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+}
+
+.card-list .card-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+    opacity: 0.5;
+    background: #5372f0;
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 1.5rem;
+}
