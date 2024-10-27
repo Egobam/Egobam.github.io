@@ -16,41 +16,40 @@
 
         <div class="selectionType">
             <span>Тип услуги:</span>
-            <label><input type="radio" name="serviceType" value="1">Концерт Пелагеи</label>
-            <label><input type="radio" name="serviceType" value="2">Концерт Bushido Zho</label>
-            <label><input type="radio" name="serviceType" value="3">Концерт Big Baby Tape</label>
-            <label><input type="radio" name="serviceType" value="4">Концерт Григория Лепса</label>
+            <label><input type="radio" name="serviceType" value="1">Концерт Пелагеи - <span class="price">1900 руб.</span></label>
+            <label><input type="radio" name="serviceType" value="2">Концерт Bushido Zho - <span class="price">от 2000 руб.</span></label>
+            <label><input type="radio" name="serviceType" value="3">Концерт Big Baby Tape - <span class="price">2200 руб.</span></label>
+            <label><input type="radio" name="serviceType" value="4">Концерт Григория Лепса - <span class="price">от 3800 руб.</span></label>
         </div>
 
         <div class="selectionOptions" id="optionsContainerOne" style="display: none;">
             <label for="optionsOne">Опции:</label>
-            <select id="optionsOne">
-                <option value="">Выберите опцию</option>
-                <option value="option1">Танцпол</option>
-                <option value="option2">VIP</option>
-                <option value="option3">VIP + фото с исполнителем</option>
+            <select id="optionsOne">    
+                <option value="option1">Танцпол - <span class="price">2000 руб.</span></option>
+                <option value="option2">VIP - <span class="price">2800 руб.</span></option>
+                <option value="option3">VIP + фото с исполнителем - <span class="price">3200 руб.</span></option>
             </select>
         </div>
 
         <div class="selectionOptions" id="optionsContainerTwo" style="display: none;">
             <label for="optionsTwo">Опции:</label>
             <select id="optionsTwo">
-                <option value="">Выберите опцию</option>
-                <option value="option1">AfterParty</option>
-                <option value="option2">Исполнение песни на заказ</option>
+                <option value="">Концерт <span class="price">3800 руб.</span> </option>
+                <option value="option1">Концерт + AfterParty - <span class="price">5800 руб.</span></option>
+                <option value="option2">Концерт + Исполнение песни на заказ - <span class="price">5800 руб.</span></option>
             </select>
         </div>
 
         <div class="selectionProperty" id="checkboxContainer" style="display: none;">
-            <label><input type="checkbox" id="property1">Фото</label>
-            <label><input type="checkbox" id="property2">Роспись</label>
-            <label><input type="checkbox" id="property3">Передать привет</label>
-            <label><input type="checkbox" id="property4">Фирменный браслет</label>
+            <label><input type="checkbox" id="property1">Фото - <span class="price">400 руб.</span></label>
+            <label><input type="checkbox" id="property2">Роспись - <span class="price">400 руб.</span></label>
+            <label><input type="checkbox" id="property3">Передать привет - <span class="price">400 руб.</span></label>
+            <label><input type="checkbox" id="property4">Фирменный браслет - <span class="price">400 руб.</span></label>
         </div>
 
         <div class="totalPrice">
             <p>Итоговая стоимость: <span id="totalCost">0</span> руб.</p>
-        </div>
+        </div>  
     </div>
 
     <script src="script.js"></script>
