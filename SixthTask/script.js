@@ -1,4 +1,4 @@
-document.AddEventListener("DOMContentLoaded",() => {
+document.addEventListener("DOMContentLoaded",() => {
     // Получение необходимых элементов из HTML
     const quantityInput = document.getElementById('quantity');
     const serviceTypeRadios = document.querySelectorAll('input[name="serviceType"]');
