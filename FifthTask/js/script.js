@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded",() => {
         
         if (!isNaN(quantity) && quantity >= 0 && !isNaN(productPrice) && productPrice > 0) {
             const totalCost = quantity * productPrice;
-            resultDisplay.textContent = Стоимость заказа: ${totalCost};
+            resultDisplay.textContent = `Стоимость заказа: ${totalCost}`;
         } else {
             resultDisplay.textContent = 'Пожалуйста, введите корректные данные';
         }
