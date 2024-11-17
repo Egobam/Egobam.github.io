@@ -1,0 +1,222 @@
+/* Основные настройки */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #81d8d0, #4db6b3); /* Градиент цвета Tiffany */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Кнопка открытия модального окна */
+#open-modal {
+    background-color: #ff6347; /* Оранжево-красный цвет */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавлена тень */
+    font-weight: bold;
+}
+
+#open-modal:hover {
+    background-color: #e55347;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.6); /* Эффект свечения по краям */
+}
+
+#open-modal:active {
+    background-color: #cc4d3e;
+    transform: translateY(0);
+}
+
+/* Модальное окно с анимацией */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out, slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* Контент модального окна (фон цвета слоновой кости) */
+.modal-content {
+    background: #f4f1e1; /* Цвет слоновой кости */
+    padding: 30px 40px;
+    border-radius: 15px; /* Более округлые углы */
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Кнопка закрытия модального окна */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Заголовок формы */
+.modal-content h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 800;
+    color: #ff6347; /* Оранжево-красный для заголовка */
+}
+
+/* Стили формы */
+#feedback-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+#feedback-form input:focus,
+#feedback-form textarea:focus {
+    border-color: #ff6347; /* Оранжево-красный цвет при фокусе */
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+    outline: none;
+}
+
+#feedback-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Чекбокс согласия */
+.consent-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.consent-label input {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Кнопка отправки формы с новым цветом и анимацией */
+.submit-btn {
+    background-color: #4EF5F1; /* Цвет Tiffany для кнопки */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 30px; /* Закругленные края */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn:hover {
+    background-color: #4BCAC6; /* Тёмный оттенок для наведения */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+.submit-btn:active {
+    background-color: #40a8a0; /* Ещё более тёмный оттенок для активного состояния */
+    transform: scale(1); /* Сброс увеличения */
+}
+
+/* Сообщения об ошибке и успехе */
+.error, .success {
+    align-self: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.send {
+    background-color: #0ABAB5;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 20px 25px;
+    }
+
+    #open-modal {
+        width: 90%;
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+}
